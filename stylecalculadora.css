@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+:root {
+    --cor-principal: rgb(0, 102, 0);
+    --cor-segundaria: rgb(126, 250, 126);
+    --cor-segundaria-hover: rgba(126, 250, 126, 0.5);
+    --cor-terciaria: rgb(0, 207, 0);
+    --cor-terciaria-hover: rgba(0, 207, 0, 0.562);
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+}
+.calculadora {
+    width: 400px;
+    height: 550px;
+    padding: 50px;
+    background-color: var(--cor-principal);
+    text-align: center;
+    margin-top: 50px;
+    border-radius: 20px;
+    border: 5px solid var(--cor-segundaria);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) inset;
+}
+.buttons {
+    margin: 10px;
+    display: flex;
+}
+
+#display {
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    font-size: 20pt;
+    border: 1px solid var(--cor-bordas);
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5) inset;
+}
+
+.numero {
+    width: 100%;
+    padding: 20px;
+    font-size: 15pt;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--cor-segundaria);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) inset;
+}
+.numero:not(:last-child){
+    margin-right: 10px;
+}
+.numero:hover {
+    background-color: var(--cor-segundaria-hover);
+    transition: 400ms ease-in-out;
+}
+
+.operacao {
+    width: 100%;
+    padding: 20px;
+    font-size: 15pt;
+    border:none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) inset;
+    background-color: var(--cor-terciaria);
+    border-radius: 10px;
+}
+.operacao:not(:last-child){
+    margin-right: 10px;
+}
+.operacao:hover {
+    transition: 400ms ease-in-out;
+    background-color: var(--cor-terciaria-hover);
+}
+
+#calcular {
+    width: 95%;
+    padding: 20px;
+    align-items: center;
+    font-size: 15pt;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) inset;
+    border-radius: 10px;
+    background-color: var(--cor-segundaria);
+}
+
+#calcular:hover {
+    background-color: var(--cor-segundaria-hover);
+    transition: 400ms ease-in-out;
+}
+
+#limpar {
+    width: 100%;
+    padding: 20px;
+    font-size: 15pt;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) inset;
+    background-color: rgb(0, 255, 13);
+    border-radius: 10px;
+}
+
+#limpar:hover {
+    transition: 400ms ease-in-out;
+    background-color: var(--cor-segundaria-hover);
+}
+
+#resultado {
+    font-size: 20pt;
+    text-align: center;
+    padding: 10px;
+    letter-spacing: 1px;
+    color: white;
+}
+.inicio{
+    text-align: center;
+    margin-top: 200px;
+}
+.inicio h1{
+    font-size: 60pt;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: green;
+    -webkit-text-stroke: 1px limegreen;
+}
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+#opr{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 40pt;
+    font-family: 'Anton';
+    color: var(--cor-principal);
+    -webkit-text-stroke: 1px limegreen;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+th {
+    background-color: #00ac2e;
+}
+tr:nth-child(2),tr:nth-child(3), tr:nth-child(5) {
+    background-color: #008407;
+    color: white;
+}
+tr:nth-child(1), tr:nth-child(4), tr:nth-child(6){
+    background-color: rgb(213, 0, 0);
+    color: white;
+}
+caption {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}

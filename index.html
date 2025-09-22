@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylecalculadora.css">
+</head>
+
+<body>
+    <section class="center">
+        <div class="calculadora">
+            <div class="visor">
+                <input type="text" id="display" placeholder="Resultado" disabled>
+                <div id="resultado"></div>
+            </div>
+            <div class="buttons">
+                <button class="numero" onclick="addDisplay('7')">7</button>
+                <button class="numero" onclick="addDisplay('8')">8</button>
+                <button class="numero" onclick="addDisplay('9')">9</button>
+                <input id="limpar" type="button" value="C" onclick="limparDisplay()">
+            </div>
+            <div class="buttons">
+                <button class="numero" onclick="addDisplay('4')">4</button>
+                <button class="numero" onclick="addDisplay('5')">5</button>
+                <button class="numero" onclick="addDisplay('6')">6</button>
+                <button class="operacao" onclick="addOperacao('!=')">!=</button>
+            </div>
+            <div class="buttons">
+                <button class="numero" onclick="addDisplay('3')">3</button>
+                <button class="numero" onclick="addDisplay('2')">2</button>
+                <button class="numero" onclick="addDisplay('1')">1</button>
+                <button class="operacao" onclick="addOperacao('==')">==</button>
+            </div>
+            <div class="buttons">
+                <button class="operacao" onclick="addOperacao('>')">></button>
+                <button class="operacao" onclick="addOperacao('<')"><</button>
+                <button class="operacao" onclick="addOperacao('>=')">>=</button>
+                <button class="operacao" onclick="addOperacao('<=')"><=</button>
+            </div>
+            <button id="calcular" onclick="calcular()">Calcular</button>
+        </div>
+        </div>
+    </section>
+    <h2 id="opr">Operadores Relacionais</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Operador</th>
+                <th>Símbolo</th>
+                <th>Descrição</th>
+                <th>Exemplo</th>
+                <th>Resultado (se x=5, y=3)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Igual a</td>
+                <td>==</td>
+                <td>Verifica se os valores são iguais</td>
+                <td>x == y</td>
+                <td>false</td>
+            </tr>
+            <tr>
+                <td>Diferente de</td>
+                <td>!=</td>
+                <td>Verifica se os valores são diferentes</td>
+                <td>x != y</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>Maior que</td>
+                <td>&gt;</td>
+                <td>Verifica se o valor é maior que outro</td>
+                <td>x &gt; y</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>Menor que</td>
+                <td>&lt;</td>
+                <td>Verifica se o valor é menor que outro</td>
+                <td>x &lt; y</td>
+                <td>false</td>
+            </tr>
+            <tr>
+                <td>Maior ou igual a</td>
+                <td>&gt;=</td>
+                <td>Verifica se o valor é maior ou igual a outro</td>
+                <td>x &gt;= y</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>Menor ou igual a</td>
+                <td>&lt;=</td>
+                <td>Verifica se o valor é menor ou igual a outro</td>
+                <td>x &lt;= y</td>
+                <td>false</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        //Cria uma cosnstante para aramazenar o elemento do HTMl com o id 'resultado'
+        const result = document.getElementById('resultado');
+        //Cria uma constante para armazenar o elemento do HTML com o id 'display'
+        const visor = document.getElementById('display');
+
+        //Cria uma função simples para adicionar ao visor o numero ao clicar no botão com a function addDisplay()
+        function addDisplay(numero) {
+            visor.value += numero;
+        }
+        //Cria uma função simples para adicionar ao visor a operação ao clicar no botão com a function addOperacao()
+        function addOperacao(operacao) {
+            visor.value += operacao;
+        }
+        //Cria uma função simples para limpar o visor ao clicar no botão com a function limparDisplay()
+        function limparDisplay() {
+            visor.value = '';
+            if (result.value = resultado) {
+                result.textContent = ''
+            }
+            else {
+                result.textContent = result
+            }
+        }
+        //Cria uma função simples para calcular e adicionar ao visor ao clicar no botão com a function calcular()
+        function calcular() {
+            let conta = document.getElementById('display').value;//O let conta recebe o que ta no display
+            let resultado;
+            resultado = eval(conta);//Faz a conta utilizando uma função do JavaScript eval(executa uma string como código JavaScript) que nesse caso retorna o valor e boleano(TRUE ou FALSE)
+            result.textContent = resultado.toString().toUpperCase()//Converte o resultado para string e letra maiúscula
+        }
+    </script>
+</body>
+
+</html>
